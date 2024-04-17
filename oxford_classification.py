@@ -1,5 +1,5 @@
 import torch
-from trainer import ClassificationTrainer
+# from trainer import ClassificationTrainer
 from src import *
 
 if __name__ == '__main__':
@@ -7,7 +7,7 @@ if __name__ == '__main__':
     learning_rate: float = 2.5e-4
     epochs: int = 4
 
-    root = '/Users/atong/Documents/Datasets/OxfordPets'
+    root = '/workspaces/CVData/datasets/OxfordFlowers'
     alias = Alias([
         Generic(DataTypes.IMAGE_NAME),
         Generic("{}_{}", DataTypes.CLASS_NAME, DataTypes.GENERIC)
@@ -80,5 +80,5 @@ if __name__ == '__main__':
         'checkpointing': True,
         'num_epochs': 25
     }
-    trainer = ClassificationTrainer.from_config(config)
-    trainer.do_training('run_1_cls')
+    # trainer = ClassificationTrainer.from_config(config)
+    # trainer.do_training('run_1_cls')
